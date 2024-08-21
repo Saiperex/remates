@@ -1,0 +1,48 @@
+/*INIT*/
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*Header*/
+header
+{
+    width: 100%;
+    background-color: #ECF0F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_center
+{
+    width: 50%;
+    min-width: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_center h1
+{
+    height: 10vh;
+}
+.header_center h1 img
+{
+    height: 100%;
+}
+.login
+{
+    display: flex;
+    flex-direction: column;
+}
+.login a
+{
+    color: #000;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #E3E6EC;
+    text-align: center;
+    box-shadow: 10px 10px 20px #D1D9E6, -10px -10px 20px #fff;
+}
