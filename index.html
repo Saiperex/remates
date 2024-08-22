@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--CSS-->
     <link rel="stylesheet" href="css/estilos.css">
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!---META-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subastas Online - Encuentra y Participa en Subastas</title>
-    <meta name="description" content="Subastas Online es tu plataforma para encontrar y participar en remates de todo tipo. Explora nuestros remates disponibles y participa en ellos fácilmente.">
-    <meta name="keywords" content="subastas online, remates online, participar en remates, subastas, remates disponibles">
+    <meta name="description"
+        content="Subastas Online es tu plataforma para encontrar y participar en remates de todo tipo. Explora nuestros remates disponibles y participa en ellos fácilmente.">
+    <meta name="keywords"
+        content="subastas online, remates online, participar en remates, subastas, remates disponibles">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Subastas Online - Encuentra y Participa en Subastas">
-    <meta property="og:description" content="Explora y participa en remates online de manera sencilla. Encuentra remates disponibles y haz tus ofertas fácilmente.">
+    <meta property="og:description"
+        content="Explora y participa en remates online de manera sencilla. Encuentra remates disponibles y haz tus ofertas fácilmente.">
     <meta property="og:image" content="assets/recursos/logo.png">
     <meta property="og:url" content="https://www.rematesonline.com/">
     <meta property="og:type" content="website">
     <link rel="icon" href="assets/recursos/logo.png" type="image/png">
     <link rel="shortcut icon" href="assets/recursos/icon.png" type="image/x-icon">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
+
 <body>
     <header>
         <div class="header_center">
@@ -36,5 +47,28 @@
             </div>
         </div>
     </header>
+    <main class="principal">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/contenido/banner/banner1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="assets/contenido/banner/banner2.webp" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </main>
 </body>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
 </html>
