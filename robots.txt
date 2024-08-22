@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /css/
+Disallow: /assets/
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://www.subastasonline.com/sitemap.xml
