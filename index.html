@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!--CSS-->
@@ -55,16 +55,54 @@
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="buscador">
+            <form action="" method="post">
+                <div class="x300p">
+                    <label for="buscador">Buscar</label>
+                    <input type="text" name="buscador" id="buscador">
+                </div>
+                <div class="x300p">
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option value="all">Todos</option>
+                    </select>
+                </div>
+                <div class="x300p">
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value="all">Todos</option>
+                    </select>
+                </div>
+                <div class="x100">
+                    <button type="submit">BUSCAR</button>
+                </div>
+            </form>
         </div>
     </main>
 </body>
+
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
-  var swiper = new Swiper(".mySwiper", {
-    navigation: {
+  var swiper = new Swiper(".mySwiper", 
+  {
+    loop: true,
+    autoplay: 
+    {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: 
+    {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: 
+    {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
