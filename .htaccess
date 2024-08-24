@@ -1,0 +1,10 @@
+RewriteEngine On
+Options -Indexes
+
+# Verificar que el archivo solicitado no sea un directorio existente
+RewriteCond %{REQUEST_FILENAME} !-d
+# Verificar que el archivo solicitado no sea un archivo existente
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Redirigir internamente a la URL con la extensión .php
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
