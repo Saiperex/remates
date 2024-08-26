@@ -211,6 +211,18 @@ header {
     width: 100%;
     min-height: 100vh;
 }
+/*Login*/
+.login_conteiner
+{
+    margin-top: 2vh;
+    width: 60%;
+    min-width: 350px;
+    min-height: 60vh;
+    background-color: #ECF0F3;
+    display: flex;
+    align-items: center;
+}
+
 
 
 
