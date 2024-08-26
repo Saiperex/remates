@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!---META-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Visualization</title>
+    <style>
+        *
+        {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: auto;
+            font-style: normal;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-images {
+            flex: 1 1 500px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        .gallery img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .product-details {
+            flex: 1 1 300px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+        }
+
+        .related-products {
+            margin-top: 40px;
+        }
+
+        .related-products h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .related-items {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
+
+        .related-item {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+
+        .related-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+            }
+
+            .product-images,
+            .product-details {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header_center">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="assets/recursos/logo.png" alt="Logo">
+                </a>
+            </h1>
+            <div class="login">
+                <a href="login.html">Iniciar Sesión</a>
+                <a href="registro.html">Registrarse</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="product">
+            <div class="product-images">
+                <img src="assets/contenido/productos/producto.png?height=500&width=500" alt="Main Product Image"
+                    class="main-image" id="mainImage">
+                <div class="gallery">
+                    <img src="assets/contenido/productos/producto.png?height=80&width=80" alt="Product Image 1"
+                        onclick="changeMainImage(this.src)">
+                    <img src="assets/contenido/productos/producto.png?height=80&width=80" alt="Product Image 2"
+                        onclick="changeMainImage(this.src)">
+                    <img src="assets/contenido/productos/producto.png?height=80&width=80" alt="Product Image 3"
+                        onclick="changeMainImage(this.src)">
+                    <img src="assets/contenido/productos/producto.png?height=80&width=80" alt="Product Image 4"
+                        onclick="changeMainImage(this.src)">
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>Nombre del lote</h1>
+                <p class="price">$99.99</p>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button onclick="alert('Added to cart!')">Ofertar</button>
+            </div>
+        </div>
+        <div class="related-products">
+            <h2>Subastas Relacionadas</h2>
+            <div class="related-items">
+                <div class="related-item">
+                    <img src="assets/contenido/productos/producto.png?height=200&width=200" alt="Related Product 1">
+                    <p>Producto relacionado 1</p>
+                    <p>$79.99</p>
+                </div>
+                <div class="related-item">
+                    <img src="assets/contenido/productos/producto.png?height=200&width=200" alt="Related Product 2">
+                    <p>Producto relacionado 2</p>
+                    <p>$89.99</p>
+                </div>
+                <div class="related-item">
+                    <img src="assets/contenido/productos/producto.png?height=200&width=200" alt="Related Product 3">
+                    <p>Producto relacionado 3</p>
+                    <p>$69.99</p>
+                </div>
+                <div class="related-item">
+                    <img src="assets/contenido/productos/producto.png?height=200&width=200" alt="Related Product 4">
+                    <p>Producto relacionado 4</p>
+                    <p>$99.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="pie">
+        <div class="footer_colums">
+            <a href="#"><img src="assets/recursos/logo.png" alt=""></a>
+            <p>Subastas Online es tu plataforma para encontrar y participar en remates de todo tipo. Explora nuestros
+                remates disponibles y participa en ellos fácilmente.</p>
+            <p>© 2024</p>
+        </div>
+        <div class="footer_colums c_especial">
+            <h4>Paginas</h4>
+            <ul>
+                <li><a href="como-pagar">Como pagar</a></li>
+                <li><a href="politicas-privacidad">Privacidad</a></li>
+                <li><a href="preguntas-frecuentes">Preguntas frecuentes</a></li>
+                <li><a href="quienes-somos">Quienes somos</a></li>
+                <li><a href="reglamentos">Reglamentos</a></li>
+            </ul>
+        </div>
+        <div class="footer_colums c_especial">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i> 351-664-3787</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i> nombre@dominio.com</a></li>
+                <li><a href="tel:+5493516643787"><i class="fa-solid fa-phone"></i> 351-664-3787</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        function changeMainImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+</body>
+
+</html>
